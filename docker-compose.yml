@@ -1,0 +1,25 @@
+#
+#version: '3.4'
+#services:
+#  reactfrontend:
+#    container_name: frontend
+#    image: sample:dev
+#    ports:
+#      - "3001:3000"
+
+
+version: '3.4'
+
+services:
+  sample-prod:
+    container_name: frontend
+    image: sample:dev
+    build:
+          context: .
+          dockerfile: Dockerfile
+    environment:
+        REACT_APP_WEBSOCKET: ws://consumer:9030/stomp
+    ports:
+      - '3001:3000'
+
+

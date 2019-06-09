@@ -1,15 +1,4 @@
-#
-#version: '3.4'
-#services:
-#  reactfrontend:
-#    container_name: frontend
-#    image: sample:dev
-#    ports:
-#      - "3001:3000"
-
-
 version: '3.4'
-
 services:
   sample-prod:
     container_name: frontend
